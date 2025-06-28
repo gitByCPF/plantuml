@@ -1,0 +1,19 @@
+@startuml
+' 改变箭头的方向|改变元素位置
+' 默认规则：左为上，右为下
+Room o-- Student
+Room *-- Chair
+@enduml
+
+@startuml
+' 两个元素变一个，规则改变：左为左，右为右
+Room o- Student
+Room *- Chair
+@enduml
+
+@startuml
+' 也可以显示指示方向 left right up down
+' a -direction- b “b在a的direction边”
+Room o-up- Student
+Room *-left- Chair
+@enduml

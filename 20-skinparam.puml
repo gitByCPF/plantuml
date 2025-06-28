@@ -1,0 +1,16 @@
+@startuml
+' 在开头就定义是必须的
+skinparam class {
+' 背景颜色
+BackgroundColor PaleGreen
+' 箭头颜色
+ArrowColor SeaGreen
+' 包边颜色
+BorderColor SpringGreen
+}
+' spot颜色
+skinparam stereotypeCBackgroundColor YellowGreen
+
+Class01 "1" *-- "many" Class02 : contains
+Class03 o-- Class04 : aggregation
+@enduml

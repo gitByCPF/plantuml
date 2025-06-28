@@ -1,0 +1,54 @@
+@startuml
+package "Classic Collections" #ffffff {
+Object <|-- ArrayList
+}
+
+package "com.plantuml" #pink {
+Object <|-- Demo1
+
+Demo1 *- Demo2
+}
+@enduml
+
+@startuml
+' package style
+' scale指令用于调整图表元素的整体大小比例
+' scale 1 就表示与原比例一致
+' scale 750 width 表示设置整体宽度为750像素，其他成比例
+scale 750 width
+
+package foo1 <<Node>> {
+' 正方体
+  class Class1
+}
+
+package foo2 <<Rectangle>> {
+' 矩形
+  class Class2
+}
+
+package foo3 <<Folder>> {
+  class Class3
+}
+
+package foo4 <<Frame>> {
+  class Class4
+}
+
+package foo5 <<Cloud>> {
+  class Class5
+}
+
+package foo6 <<Database>> {
+  class Class6
+}
+@enduml
+
+@startuml
+' links between packages
+package A <<Node>> {
+}
+package B <<Node>> {
+}
+A +-- B
+@enduml

@@ -1,0 +1,31 @@
+@startuml
+class1 ..> class2: 依赖
+class11 .left.> class22: 依赖
+class3 -- class4: 双向关联
+class3 --> class4: 单向关联
+class33 -right-> class44
+class5 o-- class6: 聚合(菱形是整体)
+class7 *-- class8: 组合
+class9 <|-- class10: 泛化
+class10 --|> class9: 继承
+class0 .up.|> interface0: 实现
+@enduml
+
+@startuml
+' 双个表示上下布局，左边表示上，右边表示下
+' 单个表示左右布局，左右表示左右
+class1 .> class2: 依赖
+class11 .> class22: 依赖
+' 此处可得出结论，左右布局的优先级更高
+class3 - class4: 双向关联
+class3 --> class4: 单向关联
+
+class33 -> class44
+class5 o- class6: 聚合(菱形是整体)
+class7 *- class8: 组合
+
+class9 <|- class10: 泛化
+class10 --|> class9: 继承
+
+class0 .up.|> interface0: 实现
+@enduml

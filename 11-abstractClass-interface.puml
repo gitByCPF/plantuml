@@ -1,0 +1,32 @@
+@startuml
+abstract class AbstractList
+abstract class AbstractCollection
+interface Collection
+interface List
+
+AbstractList -left-|> AbstractCollection
+AbstractList -up-|> List
+AbstractCollection -up-|> Collection
+List -left-|> Collection
+
+class ArrayList{
+~ Object[] elementData
++size()
+}
+
+enum TimeUnit{
+DAYS
+HOURS
+MINUTES
+}
+
+annotation SuppressWarnings{}
+
+annotation Annotation{
+annotation with members
+String foo()
+String bar()
+}
+
+ArrayList .up.|> AbstractList
+@enduml

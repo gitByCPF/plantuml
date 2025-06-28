@@ -1,0 +1,23 @@
+@startuml
+class Fool{
+you can use several lines
+..
+as you want and group
+==
+things together.
+__
+you can use as many group as you want
+--
+End of class
+}
+
+' you can also use titles within the separators
+class User{
+.. field..
+- int age
+- String name
+__ method __
++ int getAge()
++String getName()
+}
+@enduml

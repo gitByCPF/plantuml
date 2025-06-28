@@ -1,0 +1,82 @@
+@startuml
+'<<stereotype>>增强可读性
+class Object << general >>
+Object <|-- ArrayList
+
+note top of Object: in java, every class extends this one
+
+' as is necessary
+note "This is a floating note" as N1
+
+note "This note is connected to several objects" as N2
+
+' left and right represent top and bottom of the diagram
+Object .. N2
+N2 .. ArrayList
+@enduml
+
+@startuml
+' note with HTML Tags
+class Foo
+note left of Foo: defined class
+
+note top of Foo
+    In java, <size:18>Every</size> <u>class</u>
+    <b>extends</b>
+    <i>this one</i>
+end note
+
+note as N1
+This note is <u>also</u>
+<b><color:royalBlue>on several</color></b>
+<s>words</s> lines
+And this is hosted by <img:https://plantuml.com/sourceforge.jpg>
+end note
+@enduml
+
+@startuml
+' note on field(field|attribute|member) or method
+class A{
+{static} int counter
++{abstract}void start(int timeout)
+}
+
+note right of A::counter
+    This member is annotated
+end note
+
+note right of A::start
+    this methods now is explained in a UML note
+end note
+@enduml
+
+@startuml
+' if note on methods with the same name(different params)
+class A {
+{static} int counter
++void {abstract} start(int timeout)
++void {abstract} start(Duration timeout)
+}
+
+note right of A::"start(int timeout)"
+  This method with int
+end note
+
+note right of A::"start(Duration timeout)"
+  This method with Duration
+end note
+@enduml
+
+@startuml
+' note on links
+class Dummy
+class Foo
+class Foo2
+
+Dummy --> Foo: A link
+note right on link #red: red note
+
+Dummy --> Foo2: Another link
+note left on link #blue: blue note
+@enduml
+

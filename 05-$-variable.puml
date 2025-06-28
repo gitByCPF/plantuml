@@ -1,0 +1,5 @@
+@startuml class
+!$sender = "Alice"
+!$receiver = "Bob"
+$sender -> $receiver: msg
+@enduml

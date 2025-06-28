@@ -1,0 +1,36 @@
+@startuml
+' 关联类
+Student "0..*"  - "1..*" Course
+(Student,Course) .. Enrollment
+
+class Enrollment {
+drop()
+cancel()
+}
+@enduml
+
+@startuml
+' 如果想改变方向，只需增加一个-即可
+Student "0..*"  -- "1..*" Course
+(Student,Course) .. Enrollment
+
+class Enrollment {
+drop()
+cancel()
+}
+@enduml
+
+@startuml
+scale 1.2
+class Station {
+    +String name
+}
+class StationCrossing {
+    +TimeInterval cost
+}
+<> diamond
+StationCrossing . diamond
+diamond - "from 0..*" Station
+diamond - "to 0..*" Station
+
+@enduml

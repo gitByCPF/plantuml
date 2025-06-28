@@ -1,0 +1,26 @@
+@startuml
+' hide, remove or restore tagged element or wildcard
+class C1 $tag1
+enum E1
+interface I1 $tag1
+C1 -- I1
+
+hide $tag1
+' remove <=>restore
+remove $tag1
+restore $tag1
+' hide <=> show
+show $tag1
+@enduml
+
+@startuml
+' wildcard
+class C1 $tag1
+enum E2
+interface I1 $tag1
+C1 -- I1
+
+hide *1
+' keywords @unlinked
+hide @unlinked
+@enduml

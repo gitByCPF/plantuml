@@ -1,0 +1,14 @@
+@startuml
+
+Class01 "1" *-- "many" Class02 : contains
+
+Class03 o-- Class04 : aggregation
+
+Class05 --> "1" Class06: 单向关联一个
+
+class Car
+
+Driver -Car : > drivers
+Wheel "many" --o "1" Car
+Person -- Car : owns >
+@enduml

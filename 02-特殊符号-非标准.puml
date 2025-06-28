@@ -1,0 +1,6 @@
+@startuml
+Class5 #-- Class6: 受保护关联
+Class5 x-- Class6: 销毁/无效关系
+Class5 }-- Class6: 装饰器
+Class5 +-- Class6: 公共关联
+@enduml

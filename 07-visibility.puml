@@ -1,0 +1,37 @@
+@startuml
+class Dummy{
+- field1: private
+# field2: protected
+~ field3: package private
++ field4: public
+}
+@enduml
+
+@startuml
+' turn off the feature using command below
+skinparam classAttributeIconSize 0
+class Dummy{
+- field1: private
+# field2: protected
+~ field3: package private
++ field4: public
+}
+@enduml
+
+@startuml
+class Dummy{
+\- field1: private
+\# field2: protected
+' only ~ escape successfully
+\~ field3: package private
+\+ field4: public
+}
+@enduml
+
+@startuml
+' similar to define the Class visibility
+' but who know why,the
++class "Animal"{
+}
+class Dog{}
+@enduml

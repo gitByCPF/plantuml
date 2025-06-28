@@ -1,0 +1,59 @@
+@startuml
+' hide class members
+class Dummy1 {
+  +myMethods()
+}
+
+class Dummy2 {
+  +hiddenMethod()
+}
+
+class Dummy3 <<Serializable>> {
+String name
+}
+
+hide empty members
+hide field
+hide methods
+show Dummy1 methods
+hide Dummy3 circle
+show Dummy3 field
+@enduml
+
+@startuml
+' you can also mix with visibility
+class Foo{
+- private
+~ package private
+# protected
++ public
+}
+hide private field
+hide public field
+show public field
+' 如果只有一个类，隐藏是无效的
+hide Foo
+@enduml
+
+@startuml
+' hide class
+' 注意，此时的线应该是存在的，因为布局被撑大了，但是线是不可见的
+class Foo1
+class Foo2
+
+Foo2 *-- Foo1
+hide Foo2
+@enduml
+
+@startuml
+' remove class
+' 这里类和连线都被删除了，布局恢复到一个类的样子
+class Foo1
+class Foo2
+
+Foo2 *-- Foo1
+remove Foo2
+@enduml
+
+
+

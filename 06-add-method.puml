@@ -1,0 +1,19 @@
+@startuml
+Object <|-- ArrayList
+
+Object : equals()
+ArrayList : Object[] elementData
+ArrayList : -int size
+ArrayList : +size()
+
+class Dummy{
+-String: Data
++void method()
++String getData()
+}
+
+class Override{
+{field} Field field(despite parentheses)
+{method} Some method
+}
+@enduml

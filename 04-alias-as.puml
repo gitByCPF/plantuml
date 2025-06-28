@@ -1,0 +1,19 @@
+@startuml
+' 定义用例并赋予别名
+(用户登录系统) as Login
+usecase "修改个人信息" as UpdateProfile
+
+' 通过别名引用
+actor User
+User -> Login
+User --> UpdateProfile
+@enduml
+
+@startuml
+class "VeryLongClassName" as VLCN
+interface "DataProcessor" as DP
+
+VLCN ..|> DP
+@enduml
+
+

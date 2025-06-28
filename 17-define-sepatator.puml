@@ -1,0 +1,14 @@
+@startuml
+' 自定义分隔符（默认是.）
+set separator ::
+class java::lang::Integer{
+- int value
++ int intValue()
+}
+@enduml
+
+@startuml
+' 括号和名字缺一不可，棒棒糖接口
+class ArrayList
+Collection ()- ArrayList
+@enduml
