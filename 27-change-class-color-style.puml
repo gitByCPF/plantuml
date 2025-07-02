@@ -1,0 +1,24 @@
+@startuml
+title '#' 控制背景色 '##' 控制边框样式颜色
+abstract Abs
+annotation Anno #pink ##[bold]red
+class Clazz #palegreen ##[dashed]green
+interface Inter #aliceblue ##[dotted]blue
+@enduml
+
+@startuml
+title 后置分号控制所有元素
+abstract Abs
+annotation Anno  #pink;line:red;line.bold;text:red
+' 所有元素都可以自定义
+class Self <<(S,green)>> #gray;line:red;line.bold;text:gold
+@enduml
+
+@startuml
+title 简写方式和渐变色
+class Foo #back:red;line:green;line.bold
+class Foo1 #red;line.bold:green
+' 允许header控制上部分，但却没有body和footer标签，令人费解
+class Foo2 #lightgreen|yellow;header:blue/red
+@enduml
+

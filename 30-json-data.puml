@@ -1,0 +1,13 @@
+@startjson
+{
+   "fruit":"Apple",
+   "size":"Large",
+   "color": ["Red", "Green"],
+   ' 注意一点，JSON的数组内只能包含值，不能包含键值对
+   "animal": {
+        "fish": ["鲤鱼", "鲫鱼"],
+        "bird": ["鹦鹉", "鹰"]
+   }
+}
+@endjson
+

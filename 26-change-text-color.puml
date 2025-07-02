@@ -1,0 +1,21 @@
+@startuml
+title 这是后置语句定义样式
+class foo
+
+foo --> bar : normal
+' 特别注意，控制线条样式用. 意思是线条的样式表示对基础属性的增强
+foo --> bar1 #red;line.bold;text:red : red bold
+foo --> bar2 #green;line.dashed;text:green : green dashed
+foo --> bar3 #blue;line.dotted;text:blue : blue dotted
+' 你可能注意到前面在箭头中间也可以用[#red,bold]控制
+' 但是text是不能在中间写的
+@enduml
+
+@startuml
+title 控制text的两种方式
+class foo
+
+foo --> bar1 #text:red : 后置控制颜色
+foo --> bar2 : <color:red>标签控制颜色</color>
+' 因此，如果样式控制中包括text，最好是用分号后置这种方式
+@enduml

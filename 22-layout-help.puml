@@ -1,0 +1,19 @@
+@startuml
+Together1 - Together2
+
+Together2 - Together3
+
+class Bar1
+class Bar2
+
+Bar1 -[hidden]> Bar2
+Together2 -[hidden]-> Bar1
+' 多于一个-会使布局变成上下
+' Together2 -[hidden]---> Bar1会增加两者之间的距离
+
+together{
+class Together1
+class Together2
+class Together3
+}
+@enduml

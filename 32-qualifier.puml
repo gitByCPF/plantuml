@@ -1,0 +1,26 @@
+@startuml
+class class1
+class class2
+
+class1 [qualifier] -- [qualifier] class2
+
+' see the difference
+class3 "0..*" -- "1..*" class4
+@enduml
+
+@startuml
+interface Map<K,V>
+class HashMap<Long,Customer>
+
+Map <|... HashMap
+
+HashMap [id:Long] -> Customer : value
+
+Shop [customerId:Long] "\n n" --> "1" Customer
+@enduml
+
+
+
+
+
+

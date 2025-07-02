@@ -1,0 +1,6 @@
+@startuml
+class ArrayList implements List
+class ArrayList extends AbstractList
+
+class A extends B,C
+@enduml

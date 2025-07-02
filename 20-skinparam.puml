@@ -14,3 +14,24 @@ skinparam stereotypeCBackgroundColor YellowGreen
 Class01 "1" *-- "many" Class02 : contains
 Class03 o-- Class04 : aggregation
 @enduml
+
+@startuml
+' skinned stereotypes 可单独指定
+skinparam class {
+BackgroundColor PaleGreen
+ArrowColor SeaGreen
+BorderColor SpringGreen
+BackgroundColor<<Foo>> Wheat
+BorderColor<<Foo>> Tomato
+}
+
+skinparam stereotypeCBackgroundColor YellowGreen
+skinparam stereotypeCBackgroundColor<<Foo>> DimGray
+
+class Class01 <<Foo>>
+class Class03 <<Foo>>
+
+Class01 "1" *-- "many" Class02 : contains
+Class03 o-- Class04 : aggregation
+@enduml
+

@@ -1,0 +1,41 @@
+@startuml
+' two color names separated by / | \ -
+skinparam backgroundColor AntiqueWhite|Gold
+skinparam classBackgroundColor Wheat|CornflowerBlue
+
+
+class Foo #red-green
+
+note left of Foo #blue\993200
+    this is my
+    note on class
+end note
+
+package example #GreenYellow|LightGoldenRodYellow {
+    class Dummy
+}
+@enduml
+
+@startuml
+colors
+@enduml
+
+@startuml
+colors gold
+'colors #FFD700 ' 两者是等价的
+@enduml
+
+@startuml
+' 一些关键字绑定了特定的颜色
+skinparam minClassWidth 125
+skinparam nodesep 10
+skinparam ranksep 10
+
+rectangle Application    #Application
+rectangle Business       #Business
+rectangle Implementation #Implementation
+rectangle Motivation     #Motivation
+rectangle Physical       #Physical
+rectangle Strategy       #Strategy
+rectangle Technology     #Technology
+@enduml

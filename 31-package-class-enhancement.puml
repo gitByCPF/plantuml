@@ -1,0 +1,21 @@
+@startuml
+class A.B.C.D.Clazz
+@enduml
+
+@startuml
+set separator none
+class A.B.C.D.Z {
+}
+@enduml
+
+@startuml
+' 使居中package失效
+!pragma useIntermediatePackages false
+class A.B.C.D.Z {
+}
+@enduml
+
+
+
+
+
